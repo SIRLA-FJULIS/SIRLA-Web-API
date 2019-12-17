@@ -22,8 +22,8 @@ app.get('/get_count', function (req, res) {
                 }
             }
         });
-        
-        res.send(count);
+
+        res.jsonp(count);
     });
 });
 
