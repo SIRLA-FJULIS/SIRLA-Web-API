@@ -16,7 +16,13 @@ let name_auth = {
     "夜猫": ["李崇偉", "崇瑋", "夜猫"],
     "土豆": ["楊平", "土豆"],
     "琪雅": ["龔琪雅", "琪雅"],
-    "許羊": ["許堃陽", "堃陽", "許羊"]
+    "許羊": ["許堃陽", "堃陽", "許羊"],
+    "辣母羊": ["楊斯丞"],
+    "kenny": ["簡明翰"],
+    "ㄇㄒ": ["蔡孟軒"],
+    "smallant": ["葉宗儒"],
+    "比斯": ["王柏元"],
+    "cuboid": ["陳泓棣"],
 }
 
 app.get('/get_count', function (req, res) {
@@ -25,7 +31,7 @@ app.get('/get_count', function (req, res) {
         count[c] = 0;
     }
 
-    base('2019 Autumn').select({
+    base('2020 Spring').select({
         fields: ["課程名稱", "講師", "教材類型", "備註"],
         view: 'Grid view'
     }).firstPage(function(err, records) {
