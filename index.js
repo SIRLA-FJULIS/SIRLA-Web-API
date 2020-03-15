@@ -4,7 +4,7 @@ var app = express();
 const PORT = process.env.PORT || 3000
 
 var Airtable = require('airtable');
-var base = new Airtable({apiKey: process.env['AIRTABLE_API_KEY']}).base(process.env['AIRTABLE_BASE_ID']);
+var base = new Airtable({apiKey: process.env.AIRTABLE_API_KEY}).base(process.env.AIRTABLE_BASE_ID);
 
 // 名字權威檔
 let name_auth = {
