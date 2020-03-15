@@ -1,9 +1,10 @@
 var express = require('express');
+require('dotenv').config();
 var app = express();
 const PORT = process.env.PORT || 3000
 
 var Airtable = require('airtable');
-var base = new Airtable({apiKey: process.env.AIRTABLE_API_KEY}).base(process.env.AIRTABLE_BASE_ID);
+var base = new Airtable({apiKey: process.env['AIRTABLE_API_KEY']}).base(process.env['AIRTABLE_BASE_ID']);
 
 // 名字權威檔
 let name_auth = {
@@ -37,7 +38,7 @@ app.get('/get_count', function (req, res) {
     }).firstPage(function(err, records) {
         if (err) { console.error(err); return; }
         records.forEach(function(record) {
-            if(record.fields['備註'] === 'This 15 Speech' && record.fields['教材類型'] === "Slide") {
+            if(record.fields['備註'] === 'This 15 Speech' && record.fields['教材類型'] === "Slides") {
                 for(let n in name_auth){
                     if(name_auth[n].includes(record.fields['講師'])){
                         count[n] += 1;
