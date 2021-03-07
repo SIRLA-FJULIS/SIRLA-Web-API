@@ -25,7 +25,7 @@ app.get('/get_count', function (req, res) {
         count[c] = 0;
     }
 
-    base('2022 Spring').select({
+    base('2021 Spring').select({
         fields: ["課程名稱", "講師", "教材類型", "備註"],
         view: 'Grid view'
     }).firstPage(function(err, records) {
