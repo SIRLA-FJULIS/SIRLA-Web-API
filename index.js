@@ -19,6 +19,7 @@ let name_auth = {
     "ㄇㄒ": ["ㄇㄒ", "蔡孟軒"],
     "辣母羊": ["楊斯丞"],
     "郭映嫻":["郭映嫻"],
+    "Cindy Lin":["Cindy Lin", "林欣穎"],
 }
 
 app.get('/get_count', function (req, res) {
