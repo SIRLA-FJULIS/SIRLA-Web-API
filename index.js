@@ -20,6 +20,7 @@ let name_auth = {
     "辣母羊": ["楊斯丞"],
     "郭映嫻":["郭映嫻"],
     "Cindy Lin":["Cindy Lin", "林欣穎"],
+    "UR🍐":["楊子右", "UR🍐"],
 }
 
 app.get('/get_count', function (req, res) {
